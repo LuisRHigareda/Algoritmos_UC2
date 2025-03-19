@@ -28,4 +28,22 @@ public class Ordenamientos {
             }
         }
     }
+    /**
+     * Método que implementa el algoritmo de Inserción Directa.
+     * @param arreglo El arreglo de enteros que se va a ordenar.
+     */
+    public void insercionDirecta(int[] arreglo) {
+        int n = arreglo.length;
+        for (int i = 1; i < n; i++) {
+            int clave = arreglo[i]; // Elemento a insertar
+            int j = i - 1;
+
+            // Mover elementos mayores que clave una posición adelante
+            while (j >= 0 && arreglo[j] > clave) {
+                arreglo[j + 1] = arreglo[j];
+                j--;
+            }
+            arreglo[j + 1] = clave; // Insertar el elemento en su posición correcta
+        }
+    }
 }

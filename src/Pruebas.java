@@ -11,8 +11,8 @@ public class Pruebas {
         // Crear una instancia de la clase Ordenamientos
         Ordenamientos ordenamientos = new Ordenamientos();
 
-        // Llamar al método burbuja para ordenar el arreglo
-        ordenamientos.bubbleSort(numeros); 
+        // Llamar al método de inserción directa para ordenar el arreglo
+        ordenamientos.insercionDirecta(numeros);
 
         // Imprimir el arreglo después de ordenar
         System.out.println("Después de ordenar: " + Arrays.toString(numeros));

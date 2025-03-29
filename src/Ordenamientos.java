@@ -34,7 +34,7 @@ public class Ordenamientos {
      */
     public void insercionDirecta(int[] arreglo) {
         int n = arreglo.length;
-        for (int i = 1; i < n; i++) {
+         for (int i = 1; i < n; i++) {
             int clave = arreglo[i]; // Elemento a insertar
             int j = i - 1;
 
@@ -44,6 +44,25 @@ public class Ordenamientos {
                 j--;
             }
             arreglo[j + 1] = clave; // Insertar el elemento en su posición correcta
+        }
+    }
+     public void SelectionSort(int[] arreglo) {
+        int n = arreglo.length;
+
+        for (int i = 0; i < n - 1; i++) {
+            int minIndex = i; // Suponemos que el primer elemento es el menor
+
+            // Buscar el menor elemento en el resto del arreglo
+            for (int j = i + 1; j < n; j++) {
+                if (arreglo[j] < arreglo[minIndex]) {
+                    minIndex = j;
+                }
+            }
+
+            // Intercambiar el elemento encontrado con el primer elemento
+            int temp = arreglo[minIndex];
+            arreglo[minIndex] = arreglo[i];
+            arreglo[i] = temp;
         }
     }
 }

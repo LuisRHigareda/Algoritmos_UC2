@@ -65,4 +65,33 @@ public class Ordenamientos {
             arreglo[i] = temp;
         }
     }
+      public void QuickSort(int[] arreglo, int inicio, int fin) {
+        if (inicio < fin) {
+            int pivote = inicio;
+            int i = inicio + 1;
+            int j = fin;
+            int temp;
+
+            while (i <= j) {
+                while (i <= fin && arreglo[i] <= arreglo[pivote]) {
+                    i++;
+                }
+                while (j > inicio && arreglo[j] > arreglo[pivote]) {
+                    j--;
+                }
+                if (i < j) {
+                    temp = arreglo[i];
+                    arreglo[i] = arreglo[j];
+                    arreglo[j] = temp;
+                }
+            }
+
+            temp = arreglo[pivote];
+            arreglo[pivote] = arreglo[j];
+            arreglo[j] = temp;
+
+            QuickSort(arreglo, inicio, j - 1);
+            QuickSort(arreglo, j + 1, fin);
+        }
+    }
 }

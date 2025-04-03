@@ -12,7 +12,7 @@ public class Pruebas {
         Ordenamientos ordenamientos = new Ordenamientos();
 
         // Llamar al método de Selection Sort para ordenar el arreglo
-        ordenamientos.SelectionSort(numeros);
+        ordenamientos.QuickSort(numeros, 0, numeros.length - 1);
 
         // Imprimir el arreglo después de ordenar
         System.out.println("Después de ordenar: " + Arrays.toString(numeros));
